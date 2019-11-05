@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/print.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>锯切计划</h1>
+        <div class="tableContainer">
+            <table class="planTable" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th>计划锯切日期</th>
+                        <th>钢种</th>
+                        <th>规格</th>
+                        <th>炉号</th>
+                        <th>长坯支数</th>
+                        <th>长坯重量</th>
+                        <th>长坯长度</th>
+                        <th>计划短坯支数</th>
+                        <th>计划短坯长度</th>
+                        <th>已完成支数</th>
+                        <th>已完成重量</th>
+                        <th>已完成包数</th>
+                        <th>状态</th>
+                        <th>录入</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <h1>最近锯切记录</h1>
+        <div class="tableContainer">
+            <table class="recordTable" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>入库时间</th>
+                        <th>钢种</th>
+                        <th>炉号</th>
+                        <th>包号</th>
+                        <th>短坯支数</th>
+                        <th>短坯重量</th>
+                        <th>短坯长度</th>
+                        <th>录入人</th>
+                        <th>删除</th>
+                        <th>打印</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <h2>该界面只显示两天以内的锯切记录！</h2>
+
+        <!-- 信息录入框 -->
+        <div class="info_input_box">
+            <div class="header">
+                <h2>信息录入</h2>
+                <span onclick="closeBox('info_input')">+</span>
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+                <span onclick="closeBox('info_input')">取消</span>
+                <span onclick="saveInputInfo()">保存</span>
+            </div>
+        </div>
+
+        <!-- 删除确认框 -->
+        <div class="delete_confirm_box">
+            <div class="header">
+                <span onclick="closeBox('delete_confirm')">+</span>
+            </div>
+            <div class="body">
+                是否删除此条锯切记录
+            </div>
+            <div class="footer">
+                <span onclick="closeBox('delete_confirm')">取消</span>
+                <span onclick="deleteConfirm()">确定</span>
+            </div>
+        </div>
+
+        <!-- 二维码 -->
+        <div class="hidden">
+            <div class="codeContainer">
+                <div class="details">
+                    
+                </div>
+                <div id="qrcode"></div>
+            </div>
+        </div>
+
+    </div>
+<script src="js/jquery-1.4.4.min.js"></script>
+<script src="js/qrcode.min.js"></script>
+<script src="js/jquery.jqprint-0.3.js"></script>
+<script src="js/print.js"></script>
+</body>
+</html>
